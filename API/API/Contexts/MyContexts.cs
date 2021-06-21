@@ -61,6 +61,19 @@ namespace API.Contexts
                 .HasOne(a => a.Accounts)
                 .WithOne(b => b.Employees)
                 .HasForeignKey<Accounts>(b => b.NIK);
+            
+            modelBuilder.Entity<Employees>()
+                .Property(e => e.Gender)
+                .HasConversion<string>();
+
+            /*modelBuilder.Entity<Rider>()
+                .Property(e => e.Mount)
+                .HasConversion(v => v.ToString(),
+                v => (EquineBeast)Enum.Parse(typeof(EquineBeast), v));
+            
+             modelBuilder.Entity<Rider>()
+                .Property(e => e.Mount)
+                .HasConversion<string>();*/
         }
 
         //add migration

@@ -13,9 +13,9 @@ namespace API.Models
     {
         [Key]
         public string NIK { get; set; }
-        //[JsonIgnore]
+        [JsonIgnore]
         public virtual Educations Educations { get; set; }
-        //[JsonIgnore]
+        [JsonIgnore]
         public virtual Accounts Accounts { get; set; }
     }
 }

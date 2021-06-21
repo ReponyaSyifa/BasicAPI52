@@ -1,0 +1,639 @@
+{
+	"info": {
+		"_postman_id": "338b7dc9-8d32-44da-a21a-a41585f68419",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Employees",
+			"item": [
+				{
+					"name": "Get Employee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44327/API/Employees",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"API",
+								"Employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Employees",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"NIK\" : \"10005\",\r\n    \"FirstName\" : \"Neneng\",\r\n    \"LastName\" : \"Markoneng\",\r\n    \"Email\" : \"SiEneng@mail.com\",\r\n    \"Salary\" : 850,\r\n    \"PhoneNumber\" : \"354789\",\r\n    \"BirthDate\" : \"1994-09-10\",\r\n    \"Gender\" : \"Female\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44327/API/Employees",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"API",
+								"Employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Employee by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44327/API/Employees/1000",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"API",
+								"Employees",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Employee",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44327/API/Employees/10001",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"API",
+								"Employees",
+								"10001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Employee",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"NIK\" : \"10005\",\r\n    \"FirstName\" : \"Neneng\",\r\n    \"LastName\" : \"Markoneng\",\r\n    \"Email\" : \"SiEneng@mail.com\",\r\n    \"Salary\" : 850,\r\n    \"PhoneNumber\" : \"354789\",\r\n    \"BirthDate\" : \"1994-09-10\",\r\n    \"Gender\" : \"Female\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44327/API/Employees/10005",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"API",
+								"Employees",
+								"10005"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Universities",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44327/API/Universities",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"API",
+								"Universities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UniId\" : \"4\",\r\n    \"UniName\" : \"Institut Pertanian Bogor\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44327/API/Universities",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"API",
+								"Universities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UniId\" : \"4\",\r\n    \"UniName\" : \"Institut Pertanian Bogor - IPB\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44327/API/Universities/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"API",
+								"Universities",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44327/API/Universities/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"API",
+								"Universities",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44327/API/Universities/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"API",
+								"Universities",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Educations",
+			"item": [
+				{
+					"name": "Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"EducationId\" : \"15\",\r\n    \"Degree\" : \"Sarjana Komputer\",\r\n    \"GPA\" : \"3.4\",\r\n    \"Universities\" : {\r\n        \"UniId\" :\"2\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44327/API/Educations",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"API",
+								"Educations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44327/API/Educations",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"API",
+								"Educations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44327/API/Educations/11",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"API",
+								"Educations",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Education",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"EducationId\" : \"11\",\r\n    \"Degree\" : \"Sarjana Komputer\",\r\n    \"GPA\" : \"4.0\",\r\n    \"Universities\" : {\r\n        \"UniId\" :\"1\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44327/API/Educations/11",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"API",
+								"Educations",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44327/API/Educations/12",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"API",
+								"Educations",
+								"12"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profilings",
+			"item": [
+				{
+					"name": "Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"NIK\" : \"1000\",\r\n    \"Employees\" : {\r\n        \"NIK\" : \"1000\"\r\n    },\r\n    \"Educations\" : {\r\n        \"EducationId\" : \"11\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44327/API/Profilings",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"API",
+								"Profilings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44327/API/Profilings",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"API",
+								"Profilings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"NIK\" : \"10002\",\r\n    \"Employees\" : {\r\n        \"NIK\" : \"10002\"\r\n    },\r\n    \"Educations\" : {\r\n        \"EducationId\" : \"13\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44327/API/Profilings/10002",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"API",
+								"Profilings",
+								"10002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44327/API/Profilings/10001",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"API",
+								"Profilings",
+								"10001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44327/API/Profilings/10002",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"API",
+								"Profilings",
+								"10002"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Accounts",
+			"item": [
+				{
+					"name": "Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"NIK\" : \"10002\",\r\n    \"Employees\" : {\r\n        \"NIK\" : \"10002\"\r\n    },\r\n    \"Password\" : \"kamu.kepo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44327/API/Accounts",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"API",
+								"Accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44327/API/Accounts/1000",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"API",
+								"Accounts",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44327/API/Accounts",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"API",
+								"Accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44327/API/Accounts/1000",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"API",
+								"Accounts",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"NIK\" : \"10002\",\r\n    \"Employees\" : {\r\n        \"NIK\" : \"10002\"\r\n    },\r\n    \"Password\" : \"anda.kepo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44327/API/Accounts/10002",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44327",
+							"path": [
+								"API",
+								"Accounts",
+								"10002"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

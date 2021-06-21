@@ -14,9 +14,9 @@ namespace API.Models
         [Key]
         public string NIK { get; set; }
         public string Password { get; set; }
-        //[JsonIgnore]
+        [JsonIgnore]
         public virtual Profilings Profilings { get; set; }
-        //[JsonIgnore]
+        [JsonIgnore]
         public virtual Employees Employees { get; set; }
     }
 }

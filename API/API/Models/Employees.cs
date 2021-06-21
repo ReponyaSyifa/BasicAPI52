@@ -10,7 +10,7 @@ namespace API.Models
 {
     public enum Gender
     {
-        Male =1, Female=2
+        Male, Female
     }
 
     [Table("tb_m_employees")]
@@ -25,7 +25,7 @@ namespace API.Models
         public string PhoneNumber { get; set; }
         public DateTime BirthDate { get; set; }
         public Gender Gender { get; set; }
-        //[JsonIgnore]
+        [JsonIgnore]
         public virtual Accounts Accounts { get; set; }
 
         //table transaksi -> identik dengan 
