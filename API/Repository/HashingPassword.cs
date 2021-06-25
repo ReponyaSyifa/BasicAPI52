@@ -17,7 +17,22 @@ namespace API.Repository
         }
         public static bool ValidatePassword(string password, string correctHash)
         {
-            return BCrypt.Net.BCrypt.Verify(password, correctHash);
+            return BCrypt.Net.BCrypt.Verify(password, correctHash); //login after change password bisa
+                                                                    //dari reset pw yg fail
+                                                                    //invalid salt version
+        }
+
+        public static bool PasswordValidation(string password, string trueHash) //login after reset bisa
+                                                                                //dari change password yg fail
+        {
+            if (password.Equals(trueHash))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
     }

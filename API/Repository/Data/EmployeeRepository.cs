@@ -3,6 +3,7 @@ using API.Models;
 using API.ViewModel;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -61,16 +62,16 @@ namespace API.Repository.Data
                 }
                 else if (cekNIK != null && cekEmail == null)
                 {
-                    hasil = 1; // nik sudah ada
+                    hasil = 1;
 
                 }
                 else if (cekNIK == null && cekEmail != null)
                 {
-                    hasil = 2; //email sudah ada
+                    hasil = 2;
                 }
                 else if (cekNIK != null && cekEmail != null)
                 {
-                    hasil = 3; //NIK & email sudah ada
+                    hasil = 3; 
                 }
                 return hasil;
 
@@ -79,6 +80,68 @@ namespace API.Repository.Data
             {
                 return 0; // gagal daftar
             }
+        }
+
+        public IEnumerable GetAllRegister()
+        {
+            Employees emp = new Employees();
+            using (var db = myContexts)
+            {
+                var regist = (from e in myContexts.Employees
+                              join a in myContexts.Accounts on e.NIK equals a.NIK
+                              join p in myContexts.Profilings on a.NIK equals p.NIK
+                              join edu in myContexts.Educations on p.EducationsId equals edu.EducationId
+                              join u in myContexts.Universities on edu.UniversitiesId equals u.UniId
+                              select new
+                              {
+                                  e.NIK,
+                                  FullName = e.FirstName + " " + e.LastName,
+                                  e.BirthDate,
+                                  e.PhoneNumber,
+                                  e.Genders,
+                                  e.Salary,
+                                  edu.Degree,
+                                  edu.GPA,
+                                  u.UniName,
+                                  e.Email
+                              }); ;
+                return regist.ToList();
+            }
+        }
+
+        public IQueryable GetOneList(string nik)
+        {
+            var find = myContexts.Employees.Find(nik);
+            if (find != null)
+            {
+                
+                    var regist = (from e in myContexts.Employees
+                                  join a in myContexts.Accounts on e.NIK equals a.NIK
+                                  join p in myContexts.Profilings on a.NIK equals p.NIK
+                                  join edu in myContexts.Educations on p.EducationsId equals edu.EducationId
+                                  join u in myContexts.Universities on edu.UniversitiesId equals u.UniId
+                                  where e.NIK == nik
+                                  select new
+                                  {
+                                      e.NIK,
+                                      FullName = e.FirstName +" "+e.LastName,
+                                      e.BirthDate,
+                                      e.PhoneNumber,
+                                      e.Genders,
+                                      e.Salary,
+                                      edu.Degree,
+                                      edu.GPA,
+                                      u.UniName,
+                                      e.Email
+                                  });
+                    return regist;
+                
+            }
+            else
+            {
+                return null;
+            }
+            
         }
     }    
 }

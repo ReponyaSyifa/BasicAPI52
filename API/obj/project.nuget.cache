@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "la6HUFfxcfAMCbuAzmwYc42vOOAxiwZcOZT/RkpTyySVTTEkmUC1YiPmt4UdS9Ghp7WMy0k3EAObCTLZylEeFA==",
+  "dgSpecHash": "bD4mPAVIQx4bFoPIe+uamq9cIVsu2VlCVLW7J32iPDvDbVUvBNjmFXk4XSqRwH5ZZDC+wl/QSPXacLK8Ve3U9w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USER\\source\\repos\\API\\API\\API.csproj",
+  "projectFilePath": "D:\\DATA\\MCC\\BasicAPI52\\API\\API.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\USER\\.nuget\\packages\\bcrypt.net-next\\4.0.2\\bcrypt.net-next.4.0.2.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\bcrypt.net-next\\3.1.0\\bcrypt.net-next.3.1.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.16\\microsoft.aspnetcore.authentication.jwtbearer.3.1.16.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.16\\microsoft.aspnetcore.jsonpatch.3.1.16.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.16\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.16.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

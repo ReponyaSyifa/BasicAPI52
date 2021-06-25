@@ -2,13 +2,13 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "BCrypt.Net-Next/4.0.2": {
+      "BCrypt.Net-Next/3.1.0": {
         "type": "package",
         "compile": {
-          "lib/netcoreapp3.1/BCrypt.Net-Next.dll": {}
+          "lib/netstandard2.0/BCrypt.Net-Next.dll": {}
         },
         "runtime": {
-          "lib/netcoreapp3.1/BCrypt.Net-Next.dll": {}
+          "lib/netstandard2.0/BCrypt.Net-Next.dll": {}
         }
       },
       "Castle.Core/4.4.1": {
@@ -40,6 +40,21 @@
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {}
         }
+      },
+      "Microsoft.AspNetCore.Authentication.JwtBearer/3.1.16": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "5.5.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "Microsoft.AspNetCore.JsonPatch/3.1.16": {
         "type": "package",
@@ -2199,14 +2214,14 @@
     }
   },
   "libraries": {
-    "BCrypt.Net-Next/4.0.2": {
-      "sha512": "LyNKpIpr4GraRD9+xlTviyxxbZpF6J4xJf7DvraC1mR8PSN/KonGc4rt8C/fjkD3vaEvgA7BcvsbHFCOjgczyQ==",
+    "BCrypt.Net-Next/3.1.0": {
+      "sha512": "zpAiSXd1mvPh/+cG0ItL8bD9dkPZ92D/QmgL4OlikxBBHeb4Vm39eSwk2igAdbXFp7Vx9DnRxf4PjB+5+8V4cA==",
       "type": "package",
-      "path": "bcrypt.net-next/4.0.2",
+      "path": "bcrypt.net-next/3.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "bcrypt.net-next.4.0.2.nupkg.sha512",
+        "bcrypt.net-next.3.1.0.nupkg.sha512",
         "bcrypt.net-next.nuspec",
         "lib/net20/BCrypt.Net-Next.dll",
         "lib/net20/BCrypt.Net-Next.xml",
@@ -2214,22 +2229,24 @@
         "lib/net35/BCrypt.Net-Next.xml",
         "lib/net40/BCrypt.Net-Next.dll",
         "lib/net40/BCrypt.Net-Next.xml",
+        "lib/net45/BCrypt.Net-Next.dll",
+        "lib/net45/BCrypt.Net-Next.xml",
+        "lib/net451/BCrypt.Net-Next.dll",
+        "lib/net451/BCrypt.Net-Next.xml",
         "lib/net452/BCrypt.Net-Next.dll",
         "lib/net452/BCrypt.Net-Next.xml",
         "lib/net462/BCrypt.Net-Next.dll",
         "lib/net462/BCrypt.Net-Next.xml",
+        "lib/net47/BCrypt.Net-Next.dll",
+        "lib/net47/BCrypt.Net-Next.xml",
         "lib/net472/BCrypt.Net-Next.dll",
         "lib/net472/BCrypt.Net-Next.xml",
-        "lib/net48/BCrypt.Net-Next.dll",
-        "lib/net48/BCrypt.Net-Next.xml",
-        "lib/net5.0/BCrypt.Net-Next.dll",
-        "lib/net5.0/BCrypt.Net-Next.xml",
-        "lib/netcoreapp3.1/BCrypt.Net-Next.dll",
-        "lib/netcoreapp3.1/BCrypt.Net-Next.xml",
+        "lib/netstandard1.3/BCrypt.Net-Next.dll",
+        "lib/netstandard1.3/BCrypt.Net-Next.xml",
+        "lib/netstandard1.6/BCrypt.Net-Next.dll",
+        "lib/netstandard1.6/BCrypt.Net-Next.xml",
         "lib/netstandard2.0/BCrypt.Net-Next.dll",
-        "lib/netstandard2.0/BCrypt.Net-Next.xml",
-        "lib/netstandard2.1/BCrypt.Net-Next.dll",
-        "lib/netstandard2.1/BCrypt.Net-Next.xml"
+        "lib/netstandard2.0/BCrypt.Net-Next.xml"
       ]
     },
     "Castle.Core/4.4.1": {
@@ -2271,6 +2288,21 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.JwtBearer/3.1.16": {
+      "sha512": "gBcYMUrYaF95fhKIPP8024E7eT7xSCthT1RHPdGd44ZJ1+ttnWebIWWu3YEdju58eleMPVyKie2TZbHkoxSNDw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/3.1.16",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
+        "microsoft.aspnetcore.authentication.jwtbearer.3.1.16.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
       ]
     },
     "Microsoft.AspNetCore.JsonPatch/3.1.16": {
@@ -7547,7 +7579,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "BCrypt.Net-Next >= 4.0.2",
+      "BCrypt.Net-Next >= 3.1.0",
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 3.1.16",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 3.1.16",
       "Microsoft.EntityFrameworkCore >= 5.0.7",
       "Microsoft.EntityFrameworkCore.Proxies >= 5.0.7",
@@ -7561,11 +7594,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USER\\source\\repos\\API\\API\\API.csproj",
+      "projectUniqueName": "D:\\DATA\\MCC\\BasicAPI52\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\USER\\source\\repos\\API\\API\\API.csproj",
+      "projectPath": "D:\\DATA\\MCC\\BasicAPI52\\API\\API.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USER\\source\\repos\\API\\API\\obj\\",
+      "outputPath": "D:\\DATA\\MCC\\BasicAPI52\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7596,7 +7629,11 @@
         "dependencies": {
           "BCrypt.Net-Next": {
             "target": "Package",
-            "version": "[4.0.2, )"
+            "version": "[3.1.0, )"
+          },
+          "Microsoft.AspNetCore.Authentication.JwtBearer": {
+            "target": "Package",
+            "version": "[3.1.16, )"
           },
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
             "target": "Package",

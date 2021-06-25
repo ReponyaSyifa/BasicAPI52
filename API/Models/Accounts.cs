@@ -18,5 +18,6 @@ namespace API.Models
         public virtual Profilings Profilings { get; set; }
         [JsonIgnore]
         public virtual Employees Employees { get; set; }
+        public virtual ICollection<AccountRole> AccountRoles { get; set; }
     }
 }

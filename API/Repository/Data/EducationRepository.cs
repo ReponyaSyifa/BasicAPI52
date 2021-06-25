@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace API.Repository.Data
 {
-    public class EducationRepository : GeneralRepository<MyContexts, Educations, string>
+    public class EducationRepository : GeneralRepository<MyContexts, Educations, int>
     {
         public EducationRepository(MyContexts myContexts) : base(myContexts)
         {

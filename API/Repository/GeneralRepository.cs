@@ -36,7 +36,7 @@ namespace API.Repository
 
         public Entity Get(Key key)
         {
-            var findAll = entities.Find(key);
+            var findAll = entities.Find(key); //universitiesid tipenya int, sedangkan yg di general repo itu tipenya string
             return findAll;
         }
 

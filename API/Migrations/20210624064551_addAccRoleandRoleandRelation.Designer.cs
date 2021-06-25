@@ -4,14 +4,16 @@ using API.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace API.Migrations
 {
     [DbContext(typeof(MyContexts))]
-    partial class MyContextsModelSnapshot : ModelSnapshot
+    [Migration("20210624064551_addAccRoleandRoleandRelation")]
+    partial class addAccRoleandRoleandRelation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -27,11 +29,14 @@ namespace API.Migrations
                     b.Property<int>("RolesId")
                         .HasColumnType("int");
 
+                    b.Property<int>("AccountRoleId")
+                        .HasColumnType("int");
+
                     b.HasKey("AccountsId", "RolesId");
 
                     b.HasIndex("RolesId");
 
-                    b.ToTable("tb_m_accountrole");
+                    b.ToTable("AccountRole");
                 });
 
             modelBuilder.Entity("API.Models.Accounts", b =>
@@ -128,7 +133,7 @@ namespace API.Migrations
 
                     b.HasKey("RoleId");
 
-                    b.ToTable("tb_m_roles");
+                    b.ToTable("Roles");
                 });
 
             modelBuilder.Entity("API.Models.Universities", b =>

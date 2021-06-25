@@ -31,7 +31,8 @@
     ".NETCoreApp,Version=v3.1": {
       "API/1.0.0": {
         "dependencies": {
-          "BCrypt.Net-Next": "4.0.2",
+          "BCrypt.Net-Next": "3.1.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "3.1.16",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "3.1.16",
           "Microsoft.EntityFrameworkCore": "5.0.7",
           "Microsoft.EntityFrameworkCore.Proxies": "5.0.7",
@@ -315,15 +316,15 @@
           "API.dll": {}
         }
       },
-      "BCrypt.Net-Next/4.0.2": {
+      "BCrypt.Net-Next/3.1.0": {
         "runtime": {
-          "lib/netcoreapp3.1/BCrypt.Net-Next.dll": {
-            "assemblyVersion": "4.0.2.0",
-            "fileVersion": "4.0.2.0"
+          "lib/netstandard2.0/BCrypt.Net-Next.dll": {
+            "assemblyVersion": "3.1.0.0",
+            "fileVersion": "3.1.0.0"
           }
         },
         "compile": {
-          "lib/netcoreapp3.1/BCrypt.Net-Next.dll": {}
+          "lib/netstandard2.0/BCrypt.Net-Next.dll": {}
         }
       },
       "Castle.Core/4.4.1": {
@@ -355,6 +356,20 @@
             "assemblyVersion": "2.8.0.0",
             "fileVersion": "2.8.26.1919"
           }
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.JwtBearer/3.1.16": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "5.6.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
+            "assemblyVersion": "3.1.16.0",
+            "fileVersion": "3.100.1621.26305"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {}
         }
       },
       "Microsoft.AspNetCore.JsonPatch/3.1.16": {
@@ -3421,12 +3436,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "BCrypt.Net-Next/4.0.2": {
+    "BCrypt.Net-Next/3.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-LyNKpIpr4GraRD9+xlTviyxxbZpF6J4xJf7DvraC1mR8PSN/KonGc4rt8C/fjkD3vaEvgA7BcvsbHFCOjgczyQ==",
-      "path": "bcrypt.net-next/4.0.2",
-      "hashPath": "bcrypt.net-next.4.0.2.nupkg.sha512"
+      "sha512": "sha512-zpAiSXd1mvPh/+cG0ItL8bD9dkPZ92D/QmgL4OlikxBBHeb4Vm39eSwk2igAdbXFp7Vx9DnRxf4PjB+5+8V4cA==",
+      "path": "bcrypt.net-next/3.1.0",
+      "hashPath": "bcrypt.net-next.3.1.0.nupkg.sha512"
     },
     "Castle.Core/4.4.1": {
       "type": "package",
@@ -3441,6 +3456,13 @@
       "sha512": "sha512-OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "path": "humanizer.core/2.8.26",
       "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.JwtBearer/3.1.16": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gBcYMUrYaF95fhKIPP8024E7eT7xSCthT1RHPdGd44ZJ1+ttnWebIWWu3YEdju58eleMPVyKie2TZbHkoxSNDw==",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/3.1.16",
+      "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.3.1.16.nupkg.sha512"
     },
     "Microsoft.AspNetCore.JsonPatch/3.1.16": {
       "type": "package",

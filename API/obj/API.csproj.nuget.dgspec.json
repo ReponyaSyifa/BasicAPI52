@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER\\source\\repos\\API\\API\\API.csproj": {}
+    "D:\\DATA\\MCC\\BasicAPI52\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER\\source\\repos\\API\\API\\API.csproj": {
+    "D:\\DATA\\MCC\\BasicAPI52\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\source\\repos\\API\\API\\API.csproj",
+        "projectUniqueName": "D:\\DATA\\MCC\\BasicAPI52\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\USER\\source\\repos\\API\\API\\API.csproj",
+        "projectPath": "D:\\DATA\\MCC\\BasicAPI52\\API\\API.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\source\\repos\\API\\API\\obj\\",
+        "outputPath": "D:\\DATA\\MCC\\BasicAPI52\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,7 +43,11 @@
           "dependencies": {
             "BCrypt.Net-Next": {
               "target": "Package",
-              "version": "[4.0.2, )"
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.16, )"
             },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",

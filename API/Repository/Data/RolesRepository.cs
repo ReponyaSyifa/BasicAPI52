@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace API.Repository.Data
 {
-    public class UniversitiesRepository : GeneralRepository<MyContexts, Universities, int>
+    public class RolesRepository : GeneralRepository<MyContexts, Roles, int>
     {
-        public UniversitiesRepository(MyContexts myContexts) : base(myContexts)
+        public RolesRepository(MyContexts myContexts) : base(myContexts)
         {
 
         }

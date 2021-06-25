@@ -1,6 +1,7 @@
 ﻿using API.Base;
 using API.Models;
 using API.Repository.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -10,11 +11,12 @@ using System.Threading.Tasks;
 
 namespace API.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
-    public class UniversitiesController : BaseController<Universities, UniversitiesRepository, int>
+    public class RolesController : BaseController<Roles, RolesRepository, int>
     {
-        public UniversitiesController(UniversitiesRepository universitiesRepository) : base(universitiesRepository)
+        public RolesController(RolesRepository rolesRepository) : base(rolesRepository)
         {
 
         }

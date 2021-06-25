@@ -12,7 +12,7 @@ namespace API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EducationsController : BaseController<Educations, EducationRepository, string>
+    public class EducationsController : BaseController<Educations, EducationRepository, int>
     {
         public EducationsController(EducationRepository educationRepository) : base(educationRepository)
         {
