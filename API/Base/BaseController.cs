@@ -25,6 +25,7 @@ namespace API.Base
         }
 
         [HttpGet]
+        [EnableCors("AllowOrigin")]
         public ActionResult Get()
         {
             var cari = repository.Get();
@@ -33,6 +34,7 @@ namespace API.Base
         }
 
         [HttpGet("{key}")] // Get By Id
+        [EnableCors("AllowOrigin")]
         public ActionResult GetById(Key key)
         {
             var cari = repository.Get(key);
@@ -47,6 +49,7 @@ namespace API.Base
         }
 
         [HttpPost]
+        [EnableCors("AllowOrigin")]
         public ActionResult Post(Entity e)
         {
             var post = repository.Insert(e);
@@ -61,6 +64,7 @@ namespace API.Base
         }
 
         [HttpDelete("{key}")]
+        [EnableCors("AllowOrigin")]
         public ActionResult Delete(Key key)
         {
             var cari = repository.Get(key);
@@ -76,6 +80,7 @@ namespace API.Base
         }
 
         [HttpPut("{key}")]
+        [EnableCors("AllowOrigin")]
         public ActionResult Update(Entity e, Key key)
         {
             var cari = repository.Update(e, key);

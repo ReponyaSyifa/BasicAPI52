@@ -71,7 +71,7 @@ namespace API
 
             services.AddCors(c =>
             {
-                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+                c.AddPolicy("AllowOrigin", options => options.WithOrigins("https://localhost:44328"));
             });
         }
 
@@ -83,13 +83,13 @@ namespace API
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCors(options => options.AllowAnyOrigin());
-
             app.UseHttpsRedirection();
 
             app.UseAuthentication();
 
             app.UseRouting();
+
+            app.UseCors(options => options.WithOrigins("https://localhost:44328"));
 
             app.UseAuthorization();
 
