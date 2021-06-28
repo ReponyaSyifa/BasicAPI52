@@ -106,7 +106,7 @@ namespace API.Repository.Data
                     SmtpClient smtp = new SmtpClient();
                     smtp.Host = "smtp.gmail.com";
                     smtp.UseDefaultCredentials = false;
-                    NetworkCredential NetworkCred = new NetworkCredential("trianingsih.syifa@gmail.com", "raha,sia.");
+                    NetworkCredential NetworkCred = new NetworkCredential("trianingsih.syifa@gmail.com", "*******");
                     smtp.Credentials = NetworkCred;
                     smtp.EnableSsl = true;
                     smtp.Port = 587;
