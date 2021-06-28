@@ -34,7 +34,6 @@ namespace API.Controllers
             this.myContexts = myContext;
         }
 
-
         /*[HttpPost("/API/Accounts/Login")] //login w/o jwt
         public ActionResult Login(LoginVm loginVm)
         {

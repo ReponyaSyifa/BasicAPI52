@@ -7,10 +7,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 
 namespace API.Base
 {
     [Route("api/[controller]")]
+    //[EnableCors("AllowOrigin")]
     [ApiController]
     public class BaseController<Entity, Repository, Key> : ControllerBase
         where Entity : class

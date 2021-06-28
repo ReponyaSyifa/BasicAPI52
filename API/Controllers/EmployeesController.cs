@@ -4,6 +4,7 @@ using API.Models;
 using API.Repository.Data;
 using API.ViewModel;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -16,6 +17,7 @@ namespace API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    //[EnableCors("AllowOrigin")]
     public class EmployeesController : BaseController<Employees, EmployeeRepository, string>
     {
         private readonly EmployeeRepository employeeRepository;
@@ -25,6 +27,7 @@ namespace API.Controllers
         }
 
         [HttpPost("/API/Employees/Register")]
+        //[EnableCors("AllowOrigin")]
         public ActionResult Register(RegisterVm registerVm)
         {
             int post = employeeRepository.Register(registerVm);
@@ -45,6 +48,7 @@ namespace API.Controllers
 
         [Authorize]
         [HttpGet("/API/Employees/GetAllRegister")]
+        //[EnableCors("AllowOrigin")]
         public ActionResult GetAllRegister()
         {
             var get = employeeRepository.GetAllRegister();
@@ -54,6 +58,7 @@ namespace API.Controllers
 
         [Authorize] //setiap operasi butuh token otorisasi, kalo semisal daletakkan di atas controller
         [HttpGet("/API/Employees/GetOneList/{nik}")]
+        //[EnableCors("AllowOrigin")]
         public ActionResult GetOneList(string nik)
         {
             var get = employeeRepository.GetOneList(nik);
